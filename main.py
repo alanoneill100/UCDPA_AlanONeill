@@ -3,7 +3,7 @@
 import pandas as pd
 
 #reading cdv file imported from kaggle (first comumn removed as not needed)
-df_marketing_data = pd.read_csv("marketing_data.csv", index_col=0)
+df_marketing_data = pd.read_csv("marketing_data.csv")
 #subset of csv volumns printed below
 print(df_marketing_data)
 
@@ -28,6 +28,13 @@ print (df_marketing_data.isna().sum())
 cleaned_df_marketing_data = df_marketing_data.fillna(0)
 #print(df_marketing_data.shape, cleaned_df_marketing_data.shape)
 print (cleaned_df_marketing_data.isna().sum())
-print (df_marketing_data.mean())
+#print (df_marketing_data.mean())
 
 print (cleaned_df_marketing_data.isna().sum())
+
+#Dropping Duplicates
+print(cleaned_df_marketing_data.shape)
+cleaned_df2_marketing_data= df_marketing_data.drop_duplicates(subset=[" Income "])
+print(cleaned_df2_marketing_data.shape)
+print(df_marketing_data['ID'])
+
