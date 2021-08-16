@@ -38,3 +38,8 @@ cleaned_df2_marketing_data= df_marketing_data.drop_duplicates(subset=[" Income "
 print(cleaned_df2_marketing_data.shape)
 print(df_marketing_data['ID'])
 
+import matplotlib.pyplot as plt
+
+plt.subplots()
+plt.show()
+
