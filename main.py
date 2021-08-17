@@ -40,6 +40,12 @@ print(df_marketing_data['ID'])
 
 import matplotlib.pyplot as plt
 
-plt.subplots()
+fig,ax = plt.subplots()
+
+
+y = cleaned_df_marketing_data[" Income "].head(10)
+x = cleaned_df_marketing_data["Year_Birth"].head(10)
+ax.plot (x,y)
 plt.show()
+
 
