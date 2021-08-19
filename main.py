@@ -43,9 +43,9 @@ import matplotlib.pyplot as plt
 fig,ax = plt.subplots()
 
 
-y = cleaned_df_marketing_data[" Income "].head(10)
+y = cleaned_df_marketing_data["MntWines"].head(10)
 x = cleaned_df_marketing_data["Year_Birth"].head(10)
-ax.plot (x,y)
+ax.scatter (x,y)
 plt.show()
 
 
