@@ -46,6 +46,10 @@ fig,ax = plt.subplots()
 y = cleaned_df_marketing_data["MntWines"].head(10)
 x = cleaned_df_marketing_data["Year_Birth"].head(10)
 ax.scatter (x,y)
-plt.show()
+#plt.show()
+
+#For Loops, iterrows
+for lab, row in df_marketing_data.iterrows():
+     print(str(lab) + ":" + row["Education"])
 
 
