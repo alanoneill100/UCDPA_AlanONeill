@@ -50,6 +50,8 @@ ax.scatter (x,y)
 
 #For Loops, iterrows
 for lab, row in df_marketing_data.iterrows():
-     print(str(lab) + ":" + row["Education"])
+     print(str(lab) + ":" + row["Education"]
+ #
+
 
 
