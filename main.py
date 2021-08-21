@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-#reading cdv file imported from kaggle (first comumn removed as not needed)
+#reading csv file imported from kaggle (first comumn removed as not needed)
 df_marketing_data = pd.read_csv("marketing_data.csv")
 #subset of csv volumns printed below
 print(df_marketing_data)
@@ -50,8 +50,16 @@ ax.scatter (x,y)
 
 #For Loops, iterrows
 for lab, row in df_marketing_data.iterrows():
-     print(str(lab) + ":" + row["Education"]
- #
+     print(str(lab) + ":" + row["Education"])
 
+#Merging Dataframes
+df_water = pd.read_csv("water_potability.csv")
 
+#result = pd.merge (df_marketing_data, df_water [ ["Year_Birth", 'ph', 'Sulfate']],
+                   #on="Year_Birth")
+#result.head(5)
 
+frames = [df_water, df_marketing_data]
+result = pd.concat(frames)
+print(result)
+print(result.info())
