@@ -78,4 +78,34 @@ def max(x,y):
 
 print( max(1,2))
 
+#custom function related to project dataset
+def ID_Column_Subset():
+     print(df_marketing_data['ID'].head(4))
+
+print(ID_Column_Subset())
+
+
+#Numpy
+import numpy as np
+list_1 = df_water["Organic_carbon"].head(6)
+print(list_1)
+list_1a = list_1.values.tolist()
+print(list_1a)
+print(list_1)
+
+list_2 = df_marketing_data["ID"].head(6)
+print(list_2)
+list_2a = list_2.values.tolist()
+print(list_2a)
+
+#converting lists to mupy arrays
+np_list_1a = np.array(list_1a)
+print(np_list_1a)
+print(type(np_list_1a))
+
+np_list_2a = np.array(list_2a)
+print(np_list_2a)
+print(np_list_1a + np_list_2a)
+
+
 
