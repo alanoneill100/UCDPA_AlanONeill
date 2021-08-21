@@ -63,3 +63,19 @@ frames = [df_water, df_marketing_data]
 result = pd.concat(frames)
 print(result)
 print(result.info())
+
+#Writing a custom function
+def my_ucd_function():
+     print("This is a custom function")
+
+print(my_ucd_function())
+
+def max(x,y):
+     if x + y == 3:
+          return x
+     else:
+          return y
+
+print( max(1,2))
+
+
