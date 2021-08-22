@@ -38,15 +38,6 @@ cleaned_df2_marketing_data= df_marketing_data.drop_duplicates(subset=[" Income "
 print(cleaned_df2_marketing_data.shape)
 print(df_marketing_data['ID'])
 
-import matplotlib.pyplot as plt
-
-fig,ax = plt.subplots()
-
-
-y = cleaned_df_marketing_data["MntWines"].head(10)
-x = cleaned_df_marketing_data["Year_Birth"].head(10)
-ax.scatter (x,y)
-#plt.show()
 
 #For Loops, iterrows
 for lab, row in df_marketing_data.iterrows():
@@ -107,5 +98,17 @@ np_list_2a = np.array(list_2a)
 print(np_list_2a)
 print(np_list_1a + np_list_2a)
 
+#Visualising Data - Matplotlib
+import matplotlib.pyplot as plt
+fig,ax = plt.subplots()
+
+x = cleaned_df_marketing_data["Year_Birth"].head(10)
+y1 = cleaned_df_marketing_data["MntWines"].head(10)
+y2 = cleaned_df_marketing_data ["MntMeatProducts"].head(10)
+ax.plot (x,y1, marker = "o",linestyle="--", color="b", linewidth = 4.0)
+ax.plot (x, y2, marker = "v", linestyle="--", color="g")
+plt.title ('Analysis of Grocery Consumption')
+ax.set(xlabel = "Year of Birth", ylabel = "Consumption of Wine and Meat Products")
+plt.show()
 
 
