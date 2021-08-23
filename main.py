@@ -84,6 +84,7 @@ list_1a = list_1.values.tolist()
 print(list_1a)
 print(list_1)
 
+#converting to list
 list_2 = df_marketing_data["ID"].head(6)
 print(list_2)
 list_2a = list_2.values.tolist()
@@ -97,6 +98,15 @@ print(type(np_list_1a))
 np_list_2a = np.array(list_2a)
 print(np_list_2a)
 print(np_list_1a + np_list_2a)
+
+# Dictionaries
+#first created lists
+ID = [1826, 1, 10476, 1386, 5371]
+Year_Birth = [1970, 1961, 1958, 1967, 1989]
+
+
+
+
 
 #Visualising Data - Matplotlib
 import matplotlib.pyplot as plt
@@ -119,7 +129,7 @@ ax.scatter (x, y2,color="r")
 plt.title ('Analysis of Grocery Consumption')
 ax.set(xlabel = "Year of Birth", ylabel = "Consumption of Wine and Meat Products")
 #ax.add_patch(patches.Rectangle((50,50), 50,50))
-plt.show()
+#plt.show()
 
 
 x = cleaned_df_marketing_data["Year_Birth"].head(10)
@@ -128,4 +138,21 @@ plt.bar (x,y,color="r")
 plt.title ('Number of Store Purchases')
 plt.xlabel ( "Year of Birth")
 plt.ylabel ("Number of Store Purchases")
-plt.show()
+#plt.show()
+
+# Next converted to dictionary
+# key = ID ; value = year of birth
+Id_dic = {1826: 1970, 1: 1961, 10476: 1958, 1386: 1967, 5371: 1989}
+print(type(Id_dic))
+print(Id_dic[10476])
+
+#adding an extra value to dictionary
+Id_dic [7348] =1958
+print(Id_dic)
+print(7348 in Id_dic)
+
+#creating second dictionary
+Id_dic_2 = {"ID": [1826, 1, 10476], "Year_Birth": [1970, 1961, 1958],
+            "Education":["Graduation", "Graduation", "Graducation"]}
+print(type(Id_dic_2))
+print(Id_dic_2["Year_Birth"])
