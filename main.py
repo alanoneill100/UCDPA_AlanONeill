@@ -104,7 +104,22 @@ print(np_list_1a + np_list_2a)
 ID = [1826, 1, 10476, 1386, 5371]
 Year_Birth = [1970, 1961, 1958, 1967, 1989]
 
+# Next converted to dictionary
+# key = ID ; value = year of birth
+Id_dic = {1826: 1970, 1: 1961, 10476: 1958, 1386: 1967, 5371: 1989}
+print(type(Id_dic))
+print(Id_dic[10476])
 
+#adding an extra value to dictionary
+Id_dic [7348] =1958
+print(Id_dic)
+print(7348 in Id_dic)
+
+#creating second dictionary
+Id_dic_2 = {"ID": [1826, 1, 10476], "Year_Birth": [1970, 1961, 1958],
+            "Education":["Graduation", "Graduation", "Graducation"]}
+print(type(Id_dic_2))
+print(Id_dic_2["Year_Birth"])
 
 
 
@@ -140,19 +155,3 @@ plt.xlabel ( "Year of Birth")
 plt.ylabel ("Number of Store Purchases")
 #plt.show()
 
-# Next converted to dictionary
-# key = ID ; value = year of birth
-Id_dic = {1826: 1970, 1: 1961, 10476: 1958, 1386: 1967, 5371: 1989}
-print(type(Id_dic))
-print(Id_dic[10476])
-
-#adding an extra value to dictionary
-Id_dic [7348] =1958
-print(Id_dic)
-print(7348 in Id_dic)
-
-#creating second dictionary
-Id_dic_2 = {"ID": [1826, 1, 10476], "Year_Birth": [1970, 1961, 1958],
-            "Education":["Graduation", "Graduation", "Graducation"]}
-print(type(Id_dic_2))
-print(Id_dic_2["Year_Birth"])
