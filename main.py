@@ -100,7 +100,7 @@ print(np_list_2a)
 print(np_list_1a + np_list_2a)
 
 # Dictionaries
-#first created lists
+#first created lists (related to project dataset)
 ID = [1826, 1, 10476, 1386, 5371]
 Year_Birth = [1970, 1961, 1958, 1967, 1989]
 
@@ -115,7 +115,7 @@ Id_dic [7348] =1958
 print(Id_dic)
 print(7348 in Id_dic)
 
-#creating second dictionary
+#creating second dictionary (related to project dataset)
 Id_dic_2 = {"ID": [1826, 1, 10476], "Year_Birth": [1970, 1961, 1958],
             "Education":["Graduation", "Graduation", "Graducation"]}
 print(type(Id_dic_2))
@@ -155,3 +155,22 @@ plt.xlabel ( "Year of Birth")
 plt.ylabel ("Number of Store Purchases")
 #plt.show()
 
+#Nokeh Visualisation
+from bokeh.io import output_file, show
+from bokeh.plotting import figure
+
+#created lists from project csv file
+list_a = df_marketing_data["Year_Birth"].head(6)
+list_aa = list_a.values.tolist()
+x = list_aa
+print(list_aa)
+
+list_b = df_marketing_data["MntWines"].head(6)
+list_bb = list_b.values.tolist()
+y = list_bb
+print(list_bb)
+
+plot = figure (plot_width=400, plot_height = 250)
+plot.line(x,y, color="Red")
+output_file('circle.html')
+show(plot)
