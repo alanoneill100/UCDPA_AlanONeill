@@ -155,7 +155,7 @@ plt.xlabel ( "Year of Birth")
 plt.ylabel ("Number of Store Purchases")
 #plt.show()
 
-#Nokeh Visualisation
+#Bokeh Visualisation
 from bokeh.io import output_file, show
 from bokeh.plotting import figure
 
@@ -174,3 +174,10 @@ plot = figure (plot_width=400, plot_height = 250)
 plot.line(x,y, color="Red")
 output_file('circle.html')
 show(plot)
+
+import geopandas as gpd
+
+# To read -in a shape file
+#  geo_df = gdp.read_fle("Census2011_Province_generalised20m.shp")
+# geo_df.plot(). head(5)
+# plt.show()
